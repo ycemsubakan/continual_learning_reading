@@ -7,4 +7,8 @@
 
 # [A Proposal for Learning CompositionalProblem-Solvers](https://marcpickett.com/cl2018/CL-2018_paper_84.pdf)
 
-* They propose learning transformations by composing smaller transformation *routines*. One example they have in the paper is mapping arithmetic in words in different languages to numbersi (e.g. one plus two, un plus deux). They do the composition by considering a markov decision process which involves making decisions for each composition. The preliminary experiments show that instead of using an RNN to do a big *flat learning*, if you do compositional learning, it appears to learn faster.
+* They propose learning transformations by composing smaller transformation *routines*. One example they have in the paper is mapping arithmetic in words in different languages to numbers (e.g. one plus two, un plus deux). They do the composition by considering a markov decision process which involves making decisions for each composition. The preliminary experiments show that instead of using an RNN to do a big *flat learning*, if you do compositional learning, it appears to learn faster.
+
+# [Closed-Loop GAN for continual Learning](https://marcpickett.com/cl2018/CL-2018_paper_17.pdf)
+
+* First of all, this paper is about catastrophic forgetting. The paper has a review in the introduction on methods to alleviate catastrophic forgetting (second and third paragraphs), I suggest you check it out. They do generative replay with a conditional GAN. The novelty seems to be the fact that they use the same network for the GAN generator and the continually trained classifier. The experimental section is little difficult to follow, but it seems like they have used the actual training data as buffer, and they say that they good performances only if they use some real data buffer. 
