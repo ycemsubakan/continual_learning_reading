@@ -6,4 +6,5 @@
 	All this being said, I enjoyed reading this paper because it made me look at GAN training as an online / continual learning problem. (Although the solution proposed in the paper is not really continual learning, or is it? ) 
 
 # [A Proposal for Learning CompositionalProblem-Solvers](https://marcpickett.com/cl2018/CL-2018_paper_84.pdf)
-	They propose learning transformations by composing smaller transformation *routines*. One example they have in the paper is mapping arithmetic in words in different languages to numbersi (e.g. one plus two, un plus deux). They do the composition by considering a markov decision process which involves making decisions for each composition. The preliminary experiments show that instead of using an RNN to do a big *flat learning*, if you do compositional learning, it appears to learn faster.
+
+* They propose learning transformations by composing smaller transformation *routines*. One example they have in the paper is mapping arithmetic in words in different languages to numbersi (e.g. one plus two, un plus deux). They do the composition by considering a markov decision process which involves making decisions for each composition. The preliminary experiments show that instead of using an RNN to do a big *flat learning*, if you do compositional learning, it appears to learn faster.
