@@ -18,7 +18,7 @@
 
 ## [GEM](https://arxiv.org/pdf/1706.08840.pdf) 
 
-* This paper uses this thing called the *task descriptor*, namely each datapoint consists of a triple $(x_n, y_n, t_n)$, where $x_n$ is the feature, $y_n$ is the label, and $t_n$ is the task descriptor. They say that the task descriptor can be an integer label, or something like a feature vector to ``describe`` the task. I am not exactly sure what they used in their experiments. One way they differ from something like `generative replay` is that, they only provide one example at a time for the learner. (In generative replay and so on, we have a much larger batch..). Something I also like about the paper is that they define measures for quantifying forward and backward transfer in learning (equations 3-4).  
+* This paper uses this thing called the *task descriptor*, namely each datapoint consists of a triple $$(x_n, y_n, t_n)$$, where $$x_n$$ is the feature, $$y_n$$ is the label, and $$t_n$$ is the task descriptor. They say that the task descriptor can be an integer label, or something like a feature vector to ``describe`` the task. I am not exactly sure what they used in their experiments. One way they differ from something like `generative replay` is that, they only provide one example at a time for the learner. (In generative replay and so on, we have a much larger batch..). Something I also like about the paper is that they define measures for quantifying forward and backward transfer in learning (equations 3-4).  
 
 # Meta Learning
 
