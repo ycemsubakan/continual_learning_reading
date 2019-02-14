@@ -31,6 +31,8 @@
 
 ## [Few-shot self reminder to overcome catastrophic forgetting](https://marcpickett.com/cl2018/CL-2018_paper_65.pdf)
 
+* Not much is novel in this paper. The method objective is exactly like generative replay, except that instead of generating the data from a generative model, they randomly pick data from earlier datasets. They test on permuted mnist and non linearly transformed mnist, and do better than icarl, EWC, learning without forgetting (lwc). The results they have suggests that they do much better. I wonder if this would work better than generative replay. 
+
 
 # Meta Learning
 
