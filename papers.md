@@ -20,9 +20,13 @@
 
 * This paper uses this thing called the *task descriptor*: Each datapoint consists of a triple $$(x_n, y_n, t_n)$$, where $$x_n$$ is the feature, $$y_n$$ is the label, and $$t_n$$ is the task descriptor. They say that the task descriptor can be an integer label, or something like a feature vector to ``describe`` the task. I think they used integers to describe tasks (as they say so in the beginning of chapter 3). But the thing is, I don't understand why they say that forward transfer is unlikely if we use integer task descriptors? Is transfer learning accomplished only via task descriptors? One way they differ from something like `generative replay` is that, they only provide one example at a time for the learner. (In generative replay and so on, we have a much larger batch..). Something I also like about the paper is that they define measures for quantifying forward and backward transfer in learning (equations 3-4).  
 * Regarding the algorithm: The algorithm stores a subset of the observed samples to avoid forgetting. They accumulate samples that correspond to each task, but it is still unclear to me as to how do they choose the representative samples. (Denoted by calligraphic M) The idea is to project the gradient so that the performance on the earlier tasks, do not at least deteriorate.  
-* An important point that is being brought up to my attention is that it seems they don't do batch updates (judging from algorithm 1). I am not sure if they really abstain from making batch updates, and if so, I would imagine that training would take a lot of time. I need to verify this. 
+* An important point that is being brought up to my attention is that they only use a data item once (judging from algorithm 1). 
+* It also seems the tasks are ordered in training. Then what is the point of having a task descriptor? 
 
 ## [iCaRL:Incremental Classifier and Representation Learning](https://arxiv.org/pdf/1611.07725.pdf)
+
+* This paper considers incremental class learning where we add one class at a time to a dataset. The method is based on using ``examplars`` to avoid forgetting earlier classes. They try to approximate the average representation learnt for the class with a set of selected input data. After selecting these examplars, they use them to avoid forgetting when they add a new class. They only thing that confuses me is that, after learning the representation via a neural net, they pass this representation through a linear layer, and the results of the linear layer is passed through sigmoids. As far as I can understand, they are not doing multiclass classification. So could they be using a softmax, at the end of the output layer? From what I understand, the reason they use sigmoids is because they want to be able to add output units each time there is a new class observed.
+
 
 # Meta Learning
 
