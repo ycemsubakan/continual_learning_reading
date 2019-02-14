@@ -34,6 +34,17 @@
 * Not much is novel in this paper. The method objective is exactly like generative replay, except that instead of generating the data from a generative model, they randomly pick data from earlier datasets. They test on permuted mnist and non linearly transformed mnist, and do better than icarl, EWC, learning without forgetting (lwc). The results they have suggests that they do much better. I wonder if this would work better than generative replay. 
 
 
+## [Lifelong Generative Modeling](https://arxiv.org/pdf/1705.09847.pdf)
+
+* In page 3, they say that in generative replay the model is learnt from scratch. This is not necessarily true, as we (can) initialize the next network with the parameters of the current network, right? 
+
+* I find this paper hard to read, but from what I gather, they do continual learning of a VAE with replays and they use a GMM type prior. They put additional penalty to make sure that the posteriors (encoder outputs) of the models do not deviate too much from each other.
+
+## [An Empirical Study of Example Forgetting during Deep Neural Network Learning](https://arxiv.org/pdf/1812.05159.pdf)
+
+
+## [Modeling Global Class Structure Leads to Rapid Integration of New Classes](https://marcpickett.com/cl2018/CL-2018_paper_11.pdf)
+
 # Meta Learning
 
 ## [MAML](https://arxiv.org/pdf/1703.03400.pdf)
