@@ -27,6 +27,10 @@
 
 * This paper considers incremental class learning where we add one class at a time to a dataset. The method is based on using ``examplars`` to avoid forgetting earlier classes. They try to approximate the average representation learnt for the class with a set of selected input data. After selecting these examplars, they use them to avoid forgetting when they add a new class. They only thing that confuses me is that, after learning the representation via a neural net, they pass this representation through a linear layer, and the results of the linear layer is passed through sigmoids. As far as I can understand, they are not doing multiclass classification. So could they be using a softmax, at the end of the output layer? From what I understand, the reason they use sigmoids is because they want to be able to add output units each time there is a new class observed.
 
+* In the experiments they used cifar100 with 100 classes. 
+
+## [Few-shot self reminder to overcome catastrophic forgetting](https://marcpickett.com/cl2018/CL-2018_paper_65.pdf)
+
 
 # Meta Learning
 
