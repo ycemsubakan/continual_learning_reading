@@ -50,6 +50,8 @@
 
 ## [Modeling Global Class Structure Leads to Rapid Integration of New Classes](https://marcpickett.com/cl2018/CL-2018_paper_11.pdf)
 
+* They train a GMM-VAE 	type model (a VAE with GMM in the latent space), to do few shot learning. 
+
 # Meta Learning
 
 ## [MAML](https://arxiv.org/pdf/1703.03400.pdf)
