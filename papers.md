@@ -58,6 +58,8 @@
 
 * One more thing: they use an autoregressive decoder. 
 
+## [Efficient Lifelong Learning with AGEM](https://openreview.net/pdf?id=Hkf2_sC5FX)
+
 # Meta Learning
 
 ## [MAML](https://arxiv.org/pdf/1703.03400.pdf)
