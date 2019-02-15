@@ -42,6 +42,11 @@
 
 ## [An Empirical Study of Example Forgetting during Deep Neural Network Learning](https://arxiv.org/pdf/1812.05159.pdf)
 
+* It seems this paper investigates the forgetting dynamics in SGD training. They say (in the intro) that their goal is to understand something about the compressibility of the dataset (I guess towards few-shot learning?). Second, they say this can be used for outlier detection. 	They claim to find out that some of the examples are `unforgettable`, and some are more forgettable due to `uncommon` features and noisy labels. 
+* They count the number of times an example is correctly classified during training. As expected, it seems like simpler the dataset is, it contains more unforgettable examples. They measure the correlation coefficient between the total number of unforgettable items across initializations also. They report a .9 pearson correlation coefficient. They also report a correlation between classification margin and total number of unforgettable items. 
+* They then remove the unforgettable items, and see that you can retain a lot of accuracy in test even if you remove them.
+* I dont really understand what is happening in section 6, what is ``ordering obtained at the end of training``? Also, I dont understand figure 4-b and figure 5 right panel (why is the 'random removed' has constant test classification with respect to  average number of forgetting events?). 
+
 
 ## [Modeling Global Class Structure Leads to Rapid Integration of New Classes](https://marcpickett.com/cl2018/CL-2018_paper_11.pdf)
 
