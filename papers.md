@@ -56,6 +56,8 @@
 
 * One thing I don't understand about this paper: They say when they add a new task, they do not update the network parameters. Then, how much do they train (or jointly train) before they start adding new tasks? Also, what is the size of the joint training dataset? - I couldn't find these answers in the paper (maybe I am missing something). 
 
+* One more thing: they use an autoregressive decoder. 
+
 # Meta Learning
 
 ## [MAML](https://arxiv.org/pdf/1703.03400.pdf)
