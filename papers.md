@@ -50,7 +50,11 @@
 
 ## [Modeling Global Class Structure Leads to Rapid Integration of New Classes](https://marcpickett.com/cl2018/CL-2018_paper_11.pdf)
 
-* They train a GMM-VAE 	type model (a VAE with GMM in the latent space), to do few shot learning. 
+* They train a GMM-VAE 	type model (a VAE with GMM in the latent space), to do few shot learning, with a semi supervised type VAE. 
+
+* First they train a model on a big dataset, and for new tasks, they just add components to the GMM, and keep the neural network part fixed. (They only update the GMM components) 
+
+* One thing I don't understand about this paper: They say when they add a new task, they do not update the network parameters. Then, how much do they train (or jointly train) before they start adding new tasks? Also, what is the size of the joint training dataset? - I couldn't find these answers in the paper (maybe I am missing something). 
 
 # Meta Learning
 
