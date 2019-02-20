@@ -60,6 +60,14 @@
 
 ## [Efficient Lifelong Learning with AGEM](https://openreview.net/pdf?id=Hkf2_sC5FX)
 
+* They introduce a new lifelong learning setup where some of the datasets are used for cross validation. Again only one pass through the dataset is allowed. They also propose few measures for evaluation suitable for the learning setup they use in the paper. 
+
+* The main idea in the paper differs from GEM as follows: In GEM, the gradient direction is computed by solving a QP which makes sure that the loss doesn't go up in all previous tasks, by individually computing inner products between the gradients of all tasks and the new direction. In the A-GEM version, the old tasks are lumped into one gradient direction. This makes the projection computationally lighter, and according the experiments, the performance is comparable. 
+
+* Unlike the other continual learning papers I have seen so far, in this paper, for each task we specify a task descriptor in form of a matrix. This matrix is of the form $C_k \times A$, where $C_k$ is the number of tasks in task $k$, and $A$ is the number of attributes. This matrix goes through a transformation which embeds the attributes in a $D < K$ dimensional space. Similarly, each input data item is also embedded in a $D$ dimensional space (in the paper they used different mappings for two). Then, compute the matrix vector product of the attribute embedding matrix and the lower dimensional data to compute a marginal distribution over the class. This prediction is optimized using the cross-entropy loss.  
+
+* They have experiments on incremental class learning. In those they don't look at forward transfer. In the datasets where they look at forward transfer, they are able to construct the task descriptors using labels provided by the dataset: They consider a bird classification dataset (CUB) for which we have descriptors regarding beaks, feathers and so on. 
+
 # Meta Learning
 
 ## [MAML](https://arxiv.org/pdf/1703.03400.pdf)
